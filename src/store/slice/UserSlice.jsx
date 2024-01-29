@@ -17,6 +17,11 @@ const UserSlice = createSlice({
             // console.log("sumon");
             return  [];
         }
+    },
+    extraReducers(builder){
+        builder.addCase(UserSlice.actions.removeAllUsers, ()=> {
+            return [];
+        });
     }
 })
 
