@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import FakeUserData from "../../Api/FakeUserData";
-import { addUser, removeAllUsers, removeUser } from "../../store/slice/UserSlice";
+import { addUser, removeUser } from "../../store/slice/UserSlice";
+import { removeAllUsers } from "../../actions/actions";
 
 const Home = () => {
     const dispatch = useDispatch();
