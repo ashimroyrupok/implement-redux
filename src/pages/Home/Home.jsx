@@ -1,9 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import FakeUserData from "../../Api/FakeUserData";
-import { addUser, removeUser } from "../../store/slice/UserSlice";
+import { addUser, removeAllUsers, removeUser } from "../../store/slice/UserSlice";
 
 const Home = () => {
     const dispatch = useDispatch();
+
+
+    const allDelete = ()=> {
+        dispatch(removeAllUsers())
+    }
 
     const handleDelete = (id)=> {
         dispatch(removeUser(id))
@@ -56,7 +61,7 @@ const Home = () => {
         ))}
 
         <div className="max-w-2xl flex items-end justify-end mt-4 m-auto text-end">
-          <button className=" text-xl px-4 rounded-md py-3 font-bold bg-gradient-to-r from-yellow-500 to-red-500   ">
+          <button onClick={allDelete} className=" text-xl px-4 rounded-md py-3 font-bold bg-gradient-to-r from-yellow-500 to-red-500   ">
             Delete all Users
           </button>
         </div>

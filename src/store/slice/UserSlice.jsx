@@ -13,7 +13,10 @@ const UserSlice = createSlice({
             // state.pop(action.payload)
             state.splice(action.payload,1)
         },
-        removeAllUsers (state,action){}
+        removeAllUsers (state,action){
+            // console.log("sumon");
+            return  [];
+        }
     }
 })
 
